@@ -8,23 +8,24 @@ import RealButton from '../components/RealButton';
 <Layout title="Welcome to Astro.">
 	<main>
 		<h1>Testing this great <span class="text-gradient">framework!</span></h1>
+		<a href="/">
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			Come back to Page 1
 		</p>
+		</a>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="#"
 				title="Documentation"
 				body="Learn how Astro works and explore the official API docs."
 			/>
-			<Card
-				href="#"
-				title="Test this button"
-				body="Developing something YEAH!"
-			>
-				<RealButton client:load />
-			</Card>
+			<RealButton client:load>
+				<Card
+					href="#"
+					title="Click this button"
+					body="To show who coded this!"
+				/>
+			</RealButton>
 		</ul>
 	</main>
 </Layout>

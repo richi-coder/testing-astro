@@ -1,13 +1,20 @@
 import { useState } from 'react'
 
-function RealButton() {
-    const [state, setState] = useState("")
+function RealButton({children}) {
+    const [state, setState] = useState("Who coded this mess?")
+    const [color, setColor] = useState("blue")
 
   return (
-    <>
-    <h1>{state}</h1>
-    <button onClick={() => setState("RICHI CODER HERE!")}>React Button</button>
-    </>
+    <div>
+      <h2 style={{color: color}}>{state}</h2>
+      <div
+      onClick={() => {
+        setState("Richi Coder"); setColor("red")
+      }}
+      >
+        {children}
+      </div>
+    </div>
   )
 }
 
